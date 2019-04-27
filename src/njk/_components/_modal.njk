@@ -1,0 +1,31 @@
+{% macro modal(baseClassName, title, contents) %}
+  <!-- .js-{{ baseClassName }}-wrapper -->
+  <div class="ModalBase js-{{ baseClassName }}-wrapper">
+    <div class="ModalBase__contentsWrapper">
+      <div class="Modal">
+        <div class="Modal__header">
+          <!-- modal title -->
+          {{ title }}
+          <!-- /modal title -->
+        </div>
+        <div class="Modal__body">
+          <div class="Modal__bodyInner">
+            <!-- modal body -->
+            {{ contents() }}
+            <!-- /modal body -->
+          </div>
+        </div>
+        <div class="Modal__footer">
+          <ul class="Modal__buttons">
+            <li class="Modal__buttonWrapper">
+              <button class="Button Button--minor js-{{ baseClassName }}-close-cancel">CANCEL</button>
+            </li>
+            <li class="Modal__buttonWrapper"><button class="Button Button--primary js-{{ baseClassName }}-close-ok">OK</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ModalBase__background js-{{ baseClassName }}-close-cancel"></div>
+  </div>
+  <!-- /.js-{{ baseClassName }}-wrapper -->
+{% endmacro %}

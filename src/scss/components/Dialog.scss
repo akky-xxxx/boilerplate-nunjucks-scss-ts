@@ -1,0 +1,32 @@
+.Dialog {
+  background-color: $color-ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  max-width: 400px;
+  width: calc(100vw - 40px);
+}
+
+.Dialog__body {
+  height: 120px;
+  padding: 12px;
+}
+
+.Dialog__footer {
+  border-top: 1px solid $color-aaaaaa;
+  padding: 12px;
+  text-align: right;
+}
+
+.Dialog__buttons {
+  display: inline-flex;
+  margin: 0;
+}
+
+.Dialog__buttonWrapper {
+  list-style: none;
+
+  & + & {
+    margin-left: 12px;
+  }
+}

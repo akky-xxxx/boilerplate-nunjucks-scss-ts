@@ -1,0 +1,42 @@
+.Button {
+  &--primary {
+    background-color: $color-fb8c00;
+    color: $color-ffffff;
+
+    &:hover {
+      background-color: $color-ffb74d;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-1976d2;
+    color: $color-ffffff;
+
+    &:hover {
+      background-color: $color-2196f3;
+    }
+  }
+
+  &--minor {
+    background-color: $color-eeeeee;
+
+    &:hover {
+      background-color: $color-fafafa;
+    }
+  }
+
+  align-items: center;
+  appearance: none;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 1px rgba($color-000000, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 120px;
+  outline: none;
+  padding: 8px;
+  transition: background-color 0.1s linear;
+}

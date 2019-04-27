@@ -1,0 +1,233 @@
+{% extends '../../_default.njk' %}
+
+{% block title -%}
+  FORM
+{%- endblock %}
+
+{% block css -%}
+  <link rel="stylesheet" href="/css/pages/form/index.css" />
+{%- endblock %}
+
+{% block js -%}
+  <script src="/js/pages/form/index.js" async></script>
+{% endblock %}
+
+{% block mainContents %}
+  <p>
+    入力してくだしい
+  </p>
+  <form action="" novalidate class="js-form">
+    <ul class="Form">
+      <li class="Form__row">
+        <div class="Form__heading">text require</div>
+        <div class="Form__inputWrapper">
+          <input
+            type="text"
+            class="Form__text js-validate"
+            data-validation-rules="maxLength minLength"
+            data-validation-max-lengh="12"
+            data-validation-min-length="4"
+            required
+          >
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">text any</div>
+        <div class="Form__inputWrapper">
+          <input
+            type="text"
+            class=" Form__text js-validate"
+            data-validation-rules="maxLength minLength"
+            data-validation-max-lengh="12"
+            data-validation-min-length="4"
+          >
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">ふが</div>
+        <div class="Form__inputWrapper">
+          <input
+            type="text"
+            class="Form__text js-validate"
+            data-validation-rules="number equalLength"
+            data-validation-equal-lengh="7"
+            required
+          >
+        </div>
+      </li>
+    </ul>
+
+    <ul class="Form">
+      <li class="Form__row">
+        <div class="Form__heading">hoge</div>
+        <div class="Form__inputWrapper">
+          <input
+            type="text"
+            class="Form__text js-validate"
+            data-validation-rules="number equalLength"
+            data-validation-equal-lengh="7"
+            required
+          >
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">radio buttons required</div>
+        <div class="Form__inputWrapper">
+          <label>
+            <input
+                    type="radio"
+                    class="Form__radio js-validate"
+                    data-validation-rules="radio"
+                    name="radio-required"
+                    value="1"
+                    required
+            >
+            <span class="Form__radioIcon"></span> A
+          </label>
+          <label>
+            <input
+                    type="radio"
+                    class="Form__radio js-validate js-no-balloon"
+                    data-validation-rules="radio"
+                    name="radio-required"
+                    value="2"
+                    required
+            >
+            <span class="Form__radioIcon"></span> B
+          </label>
+          <label>
+            <input
+                    type="radio"
+                    class="Form__radio js-validate  js-no-balloon"
+                    data-validation-rules="radio"
+                    name="radio-required"
+                    value="3"
+                    required
+            >
+            <span class="Form__radioIcon"></span> C
+          </label>
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">radio buttons any</div>
+        <div class="Form__inputWrapper">
+          <label>
+            <input
+                    type="radio"
+                    class="Form__radio"
+                    value="1"
+            >
+            <span class="Form__radioIcon"></span> A
+          </label>
+          <label>
+            <input
+                    type="radio"
+                    class="Form__radio"
+                    value="2"
+            >
+            <span class="Form__radioIcon"></span> B
+          </label>
+          <label>
+            <input
+                    type="radio"
+                    class="Form__radio"
+                    value="3"
+            >
+            <span class="Form__radioIcon"></span> C
+          </label>
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">checkboxes required</div>
+        <div class="Form__inputWrapper">
+          <label>
+            <input
+                    type="checkbox"
+                    class="Form__checkbox js-validate"
+                    data-validation-rules="checkbox"
+                    name="checkbox-required"
+                    value="1"
+                    required
+            >
+            <span class="Form__checkboxIcon"></span> A
+          </label>
+          <label>
+            <input
+                    type="checkbox"
+                    class="Form__checkbox js-validate js-no-balloon"
+                    data-validation-rules="checkbox"
+                    name="checkbox-required"
+                    value="2"
+                    required
+            >
+            <span class="Form__checkboxIcon"></span> B
+          </label>
+          <label>
+            <input
+                    type="checkbox"
+                    class="Form__checkbox js-validate js-no-balloon"
+                    data-validation-rules="checkbox"
+                    name="checkbox-required"
+                    value="3"
+                    required
+            >
+            <span class="Form__checkboxIcon"></span> C
+          </label>
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">checkboxes any</div>
+        <div class="Form__inputWrapper">
+          <label>
+            <input
+                    type="checkbox"
+                    class="Form__checkbox"
+                    value="1"
+            >
+            <span class="Form__checkboxIcon"></span> A
+          </label>
+          <label>
+            <input
+                    type="checkbox"
+                    class="Form__checkbox"
+                    value="2"
+            >
+            <span class="Form__checkboxIcon"></span> B
+          </label>
+          <label>
+            <input
+                    type="checkbox"
+                    class="Form__checkbox"
+                    value="3"
+            >
+            <span class="Form__checkboxIcon"></span> C
+          </label>
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">select any</div>
+        <div class="Form__inputWrapper">
+          <select class="js-validate" data-validation-rules="select">
+            <option value="">選択してください</option>
+            <option value="1">選択肢1</option>
+            <option value="2">選択肢2</option>
+          </select>
+        </div>
+      </li>
+      <li class="Form__row">
+        <div class="Form__heading">select required</div>
+        <div class="Form__inputWrapper">
+          <select class="js-validate" data-validation-rules="select" required>
+            <option value="">選択してください</option>
+            <option value="1">選択肢1</option>
+            <option value="2">選択肢2</option>
+          </select>
+        </div>
+      </li>
+    </ul>
+    <div class="buttonArea">
+      <button type="submit" class="Button Button--primary js-subimt">送信</button>
+    </div>
+  </form>
+  <div class="js-balloon-space"></div>
+{% endblock %}

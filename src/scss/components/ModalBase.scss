@@ -1,0 +1,45 @@
+.is-bodyLock {
+  overflow: hidden;
+}
+
+.is-blur {
+  filter: blur(3px);
+}
+
+.ModalBase {
+  align-items: center;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition-property: opacity;
+  transition-timing-function: linear;
+  z-index: 50;
+
+  &.is-show {
+    display: flex;
+  }
+
+  &.is-fadeIn {
+    opacity: 1;
+  }
+}
+
+.ModalBase__background {
+  background-color: rgba($color-000000, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.ModalBase__contentsWrapper {
+  position: relative;
+  z-index: 20;
+}
