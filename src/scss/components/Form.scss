@@ -1,0 +1,155 @@
+.Form {
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.Form__row {
+  align-items: center;
+  display: flex;
+  padding: 20px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $color-eeeeee;
+  }
+}
+
+.Form__heading {
+  flex-basis: 120px;
+  font-weight: 700;
+}
+
+.Form__inputWrapper {
+  flex-grow: 1;
+}
+
+.Form__errorBalloon {
+  background-color: $color-ffefec;
+  border: 1px solid $color-ff7153;
+  border-radius: 4px;
+  color: $color-ff7153;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 10;
+
+  &:empty {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    border-style: solid;
+    content: "";
+    display: inline-block;
+    height: 0;
+    left: 5px;
+    position: absolute;
+    width: 0;
+  }
+
+  &::before {
+    border-color: $color-ff7153 transparent transparent transparent;
+    border-width: 5px 5px 0 5px;
+    bottom: -5px;
+    z-index: 5;
+  }
+
+  &::after {
+    border-color: $color-ffefec transparent transparent transparent;
+    border-width: 5px 5px 0 5px;
+    bottom: -4px;
+    z-index: 15;
+  }
+}
+
+.Form__text {
+  border: 1px solid $color-cccccc;
+  border-radius: 4px;
+  color: $color-555555;
+  font-size: 16px;
+  height: 44px;
+  line-height: 1;
+  padding: 0 8px;
+  width: 100%;
+}
+
+.Form__radio {
+  height: 16px;
+  visibility: hidden;
+  width: 16px;
+
+  & + .Form__radioIcon {
+    align-items: center;
+    border: 1px solid $color-cccccc;
+    border-radius: 50%;
+    display: inline-flex;
+    height: 16px;
+    justify-content: center;
+    line-height: 1;
+    margin-left: -16px;
+    width: 16px;
+
+    &::after {
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: 8px;
+      width: 8px;
+    }
+  }
+
+  &:checked + .Form__radioIcon {
+    background-color: $color-00cbff;
+    border-color: transparent;
+
+    &::after {
+      background-color: $color-ffffff;
+    }
+  }
+}
+
+.Form__checkbox {
+  height: 16px;
+  visibility: hidden;
+  width: 16px;
+
+  & + .Form__checkboxIcon {
+    align-items: center;
+    border: 1px solid $color-cccccc;
+    border-radius: 4px;
+    display: inline-flex;
+    height: 16px;
+    justify-content: center;
+    line-height: 1;
+    margin-left: -16px;
+    position: relative;
+    width: 16px;
+
+    &::after {
+      border-bottom: 2px solid $color-ffffff;
+      border-left: 2px solid $color-ffffff;
+      border-top: none;
+      content: "";
+      display: inline-block;
+      height: 7px;
+      left: 2px;
+      position: absolute;
+      top: 2px;
+      transform: rotate(-45deg);
+      width: 10px;
+    }
+  }
+
+  &:checked + .Form__checkboxIcon {
+    background-color: $color-00cbff;
+    border-color: transparent;
+
+    &::after {
+      border-bottom-color: $color-ffffff;
+      border-left-color: $color-ffffff;
+    }
+  }
+}

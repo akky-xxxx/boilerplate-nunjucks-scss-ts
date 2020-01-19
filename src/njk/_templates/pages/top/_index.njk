@@ -1,0 +1,81 @@
+{% extends '../../_default.njk' %}
+{% from '../../../_components/_dialog.njk' import dialog %}
+{% from '../../../_components/_modal.njk' import modal %}
+
+{% block title %}TOP{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="/css/pages/top/index.css" />
+{% endblock %}
+
+{% block js %}
+  <script src="/js/pages/top/index.js" async></script>
+{% endblock %}
+
+{% block mainContents %}
+  <div align="center">
+    <button class="Button Button--secondary js-dialog-open">ダイアログ</button>
+    <button class="Button Button--secondary js-modal-open">モーダル1</button>
+    <button class="Button Button--secondary js-modal2-open">モーダル2</button>
+  </div>
+
+  {% for i in [1,2,3,4,5,6,7,8,9,10] %}
+    <div class="dummy">
+      top {{ i }}
+    </div>
+  {% endfor %}
+
+  <div align="center">
+    <button class="js-dialog-open">ダイアログ</button>
+    <button class="js-modal-open">モーダル1</button>
+    <button class="js-modal2-open">モーダル2</button>
+  </div>
+{% endblock %}
+
+{% block modal %}
+  {% include '../../../_components/_loader.njk' %}
+  {{ dialog('dialog', 'hoge?') }}
+
+  {% macro modalInner() %}
+    <div>
+      <ul>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+        <li>hoge</li>
+        <li>fuga</li>
+        <li>piyo</li>
+      </ul>
+    </div>
+  {% endmacro %}
+  {{ modal('modal', 'modal 1', modalInner) }}
+
+  {% macro modalInner2() %}
+    12345678987654
+  {% endmacro %}
+  {{ modal('modal2', 'modal 2 title', modalInner2) }}
+{% endblock %}

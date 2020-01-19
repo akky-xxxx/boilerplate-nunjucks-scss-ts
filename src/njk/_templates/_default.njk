@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+
+  {% block css %}{% endblock %}
+
+  {% block js %}{% endblock %}
+</head>
+<body>
+<div class="Default__wrapper js-mainContents">
+
+  <header class="Default__header">
+    header
+  </header>
+
+  <div class="Default__mainContents">
+    <main>
+      {% block mainContents %}{% endblock %}
+    </main>
+  </div>
+
+  <footer class="Default__footer">
+    <div class="Default__footerInner">
+      <ul class="siteLinks">
+        <li class="siteLinks__itemWrapper">
+          <a class="siteLinks__item" href="/">top</a>
+        </li>
+        <li>
+          <a class="siteLinks__item" href="/form">form</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+{% block modal %}{% endblock %}
+
+
+</body>
+</html>

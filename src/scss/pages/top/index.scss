@@ -1,0 +1,22 @@
+// modules
+@import "../../modules";
+
+// template
+@import "../../templates/Default";
+
+// components
+@import "../../components/ModalBase";
+@import "../../components/Modal";
+@import "../../components/Dialog";
+@import "../../components/Loader";
+
+// page
+.dummy {
+  align-items: center;
+  background-color: #afa;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 20px;
+  padding: 50px;
+  width: 800px;
+}
