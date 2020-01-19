@@ -1,4 +1,3 @@
-const Fiber = require('fibers')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const getEntryFileList = require('./lib/getEntryFileList')
 const AutoPrefixer = require('autoprefixer')
@@ -47,7 +46,6 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               implementation: require('sass'),
-              fiber: Fiber,
             },
           },
         ],

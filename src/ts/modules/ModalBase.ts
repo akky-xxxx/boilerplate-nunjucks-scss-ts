@@ -34,6 +34,7 @@ export default class ModalBase {
     afterFadeOut: number
     beforeFadeIn: number
   }
+
   elements: ElementProperty
   selectors: {
     lockBody: 'is-bodyLock'
