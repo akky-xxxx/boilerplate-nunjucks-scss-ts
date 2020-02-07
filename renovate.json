@@ -4,7 +4,7 @@
     ":preserveSemverRanges"
   ],
   "timezone": "Asia/Tokyo",
-  "schedule": ["on friday"],
+  "schedule": ["every friday"],
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": [
@@ -12,11 +12,9 @@
     ]
   },
   "minor": {
-    "groupName": "all dependencies",
     "automerge": true
   },
   "patch": {
-    "groupName": "all dependencies",
     "automerge": true
   },
   "packageRules": [
