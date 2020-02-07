@@ -15,6 +15,10 @@
     "groupName": "all dependencies",
     "automerge": true
   },
+  "patch": {
+    "groupName": "all dependencies",
+    "automerge": true
+  },
   "packageRules": [
     {
       "packagePatterns": ["date-fns"],
