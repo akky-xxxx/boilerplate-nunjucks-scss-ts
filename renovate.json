@@ -1,14 +1,5 @@
 {
   "extends": [
-    "config:base",
-    ":preserveSemverRanges"
-  ],
-  "timezone": "Asia/Tokyo",
-  "schedule": ["on friday"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": [
-      "before 3am on the first day of the month"
-    ]
-  }
+    "config:base"
+  ]
 }
