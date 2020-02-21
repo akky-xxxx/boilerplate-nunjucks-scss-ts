@@ -7,8 +7,8 @@
   },
   "devDependencies": {
     "@types/uuid": "3.4.7",
-    "@typescript-eslint/eslint-plugin": "2.19.2",
-    "@typescript-eslint/parser": "2.19.2",
+    "@typescript-eslint/eslint-plugin": "2.20.0",
+    "@typescript-eslint/parser": "2.20.0",
     "autoprefixer": "9.7.4",
     "chokidar-cli": "2.1.0",
     "cpx": "1.5.0",
