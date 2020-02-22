@@ -1,0 +1,18 @@
+trigger:
+  event:
+    - push
+pipeline:
+  install:
+    image: node:12.16.1-alpine
+    commands:
+      - yarn
+
+  type-check:
+    image: node:12.16.1-alpine
+    commands:
+      - yarn type-check
+
+  lint:
+    image: node:12.16.1-alpine
+    commands:
+      - yarn lint
