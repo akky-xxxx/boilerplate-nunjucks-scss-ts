@@ -3,12 +3,12 @@
   "ignorePresets": [":prHourlyLimit2"],
   "labels": ["renovate"],
   "timezone": "Asia/Tokyo",
-  "schedule": ["on friday"],
+  "schedule": ["on saturday"],
+  "minor": {
+    "groupName": "all dependencies"
+  },
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["before 3am on the first day of the month"]
-  },
-  "patch": {
-    "groupName": "all patches"
   }
 }
