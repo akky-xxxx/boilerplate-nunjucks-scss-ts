@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "dependencies": {
     "favalid": "^0.9.1",
-    "uuid": "^3.4.0"
+    "uuid": "^7.0.0"
   },
   "devDependencies": {
-    "@types/uuid": "3.4.7",
+    "@types/uuid": "7.0.0",
     "@typescript-eslint/eslint-plugin": "2.20.0",
     "@typescript-eslint/parser": "2.20.0",
     "autoprefixer": "9.7.4",
