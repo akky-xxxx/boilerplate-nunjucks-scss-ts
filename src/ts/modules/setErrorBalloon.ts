@@ -16,7 +16,7 @@ export default (targetElement: HTMLInputElement, errorMessage: string) => {
     document.querySelector(`.js-errorBalloon-${uniqueId}`)
   )
   const errorBalloonRect = errorBalloon.getBoundingClientRect()
-  errorBalloon.style.top = `${window.pageYOffset +
-    Math.round(inputRect.top) -
-    errorBalloonRect.height}px`
+  errorBalloon.style.top = `${
+    window.pageYOffset + Math.round(inputRect.top) - errorBalloonRect.height
+  }px`
 }
