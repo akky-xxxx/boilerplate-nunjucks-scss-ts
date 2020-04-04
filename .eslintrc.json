@@ -4,10 +4,7 @@
     "eslint-config-standard",
     "plugin:prettier/recommended"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "eslint-plugin-standard"
-  ],
+  "plugins": ["@typescript-eslint", "eslint-plugin-standard"],
   "env": {
     "es6": true,
     "browser": true
