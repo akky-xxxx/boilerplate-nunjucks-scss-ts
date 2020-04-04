@@ -54,7 +54,7 @@
     "build:common": "run-p  build:common:*",
     "build:common:html": "nunjucks **/*.njk -p ./src/njk -o ./dist -w",
     "build:dev": "webpack",
-    "check": "run-s fix lint type-check",
+    "check-all": "run-s spell-check lint type-check",
     "clean": "rimraf ./dist",
     "fix": "run-p fix:*",
     "fix:html": "prettier './dist/**/*.html' --write",
@@ -66,6 +66,7 @@
     "lint:ts": "eslint -c ./.eslintrc.json 'src/ts/**/*.ts'",
     "serve": "webpack-dev-server",
     "start": "npm-run-all clean -p build:common serve watch",
+    "spell-check": "cspell './src/**/*.{ts,njk,scss}'",
     "type-check": "tsc",
     "watch": "run-p watch:*",
     "watch:html": "chokidar './dist/**/*.html' -c 'npm run fix:html'"
