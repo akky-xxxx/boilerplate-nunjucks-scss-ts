@@ -7,7 +7,14 @@
   "plugins": ["@typescript-eslint", "eslint-plugin-standard"],
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "jest": true
+  },
+  "globals": {
+    "page": true,
+    "browser": true,
+    "context": true,
+    "jestPuppeteer": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

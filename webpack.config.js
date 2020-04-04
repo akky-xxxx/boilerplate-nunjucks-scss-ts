@@ -5,10 +5,10 @@ const AutoPrefixer = require('autoprefixer')
 const srcPath = './src'
 const distPath = `${__dirname}/dist`
 const entries = getEntryFileList(srcPath)
-console.log(entries)
+const isDev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
-  mode: 'development',
+  mode: isDev ? 'development' : 'production',
   entry: entries,
   module: {
     rules: [
@@ -66,9 +66,10 @@ module.exports = {
   ],
   devServer: {
     contentBase: distPath,
-    open: true,
-    hot: true,
+    open: isDev,
+    hot: isDev,
     port: 3000,
+    compress: !isDev,
     watchContentBase: true,
   },
 }
