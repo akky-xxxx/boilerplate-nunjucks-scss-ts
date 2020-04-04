@@ -25,7 +25,7 @@ export default (targetElement: HTMLInputElement) => {
 
   if (needValidateRules.includes('maxLength')) {
     const maxNumber = parseInt(
-      <string>targetElement.dataset.validationMaxLengh,
+      <string>targetElement.dataset.validationMaxLength,
       10,
     )
     validateRules.push(checkMax(maxNumber))
@@ -41,7 +41,7 @@ export default (targetElement: HTMLInputElement) => {
 
   if (needValidateRules.includes('equalLength')) {
     const equalNumber = parseInt(
-      <string>targetElement.dataset.validationEqualLengh,
+      <string>targetElement.dataset.validationEqualLength,
       10,
     )
     validateRules.push(checkEqual(equalNumber))
