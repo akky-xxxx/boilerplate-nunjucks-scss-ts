@@ -1,6 +1,34 @@
 {
   "name": "boilerplate-nunjucks-scss-ts",
   "version": "1.0.0",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akky-xxxx/boilerplate-nunjucks-scss-ts.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build:common": "run-p  build:common:*",
+    "build:common:html": "nunjucks **/*.njk -p ./src/njk -o ./dist -w",
+    "build:dev": "webpack",
+    "check-all": "run-s spell-check lint type-check",
+    "clean": "rimraf ./dist",
+    "fix": "run-p fix:*",
+    "fix:html": "prettier './dist/**/*.html' --write",
+    "fix:json": "prettier ./*.json --write",
+    "fix:pack": "fixpack",
+    "fix:scss": "stylelint --fix './src/scss/**/*.scss'",
+    "fix:ts": "eslint --fix -c ./.eslintrc.json 'src/ts/**/*.ts'",
+    "lint": "run-p lint:*",
+    "lint:scss": "stylelint './src/scss/**/*.scss'",
+    "lint:ts": "eslint -c ./.eslintrc.json 'src/ts/**/*.ts'",
+    "serve": "webpack-dev-server",
+    "spell-check": "cspell './src/**/*.{ts,njk,scss}'",
+    "start": "npm-run-all clean -p build:common serve watch",
+    "type-check": "tsc",
+    "watch": "run-p watch:*",
+    "watch:html": "chokidar './dist/**/*.html' -c 'npm run fix:html'"
+  },
   "dependencies": {
     "favalid": "^0.9.1",
     "uuid": "^7.0.0"
@@ -43,35 +71,5 @@
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.10.3"
-  },
-  "license": "ISC",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/akky-xxxx/boilerplate-nunjucks-scss-ts.git"
-  },
-  "scripts": {
-    "build:common": "run-p  build:common:*",
-    "build:common:html": "nunjucks **/*.njk -p ./src/njk -o ./dist -w",
-    "build:dev": "webpack",
-    "check-all": "run-s spell-check lint type-check",
-    "clean": "rimraf ./dist",
-    "fix": "run-p fix:*",
-    "fix:json": "run-p fix:json:*",
-    "fix:json:1": "prettier ./*.json --write",
-    "fix:json:2": "prettier ./**/*.json --write",
-    "fix:html": "prettier './dist/**/*.html' --write",
-    "fix:pack": "fixpack",
-    "fix:scss": "stylelint --fix './src/scss/**/*.scss'",
-    "fix:ts": "eslint --fix -c ./.eslintrc.json 'src/ts/**/*.ts'",
-    "lint": "run-p lint:*",
-    "lint:scss": "stylelint './src/scss/**/*.scss'",
-    "lint:ts": "eslint -c ./.eslintrc.json 'src/ts/**/*.ts'",
-    "serve": "webpack-dev-server",
-    "start": "npm-run-all clean -p build:common serve watch",
-    "spell-check": "cspell './src/**/*.{ts,njk,scss}'",
-    "type-check": "tsc",
-    "watch": "run-p watch:*",
-    "watch:html": "chokidar './dist/**/*.html' -c 'npm run fix:html'"
   }
 }
